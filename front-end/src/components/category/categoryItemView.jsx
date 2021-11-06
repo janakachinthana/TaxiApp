@@ -16,6 +16,7 @@ class CategoryItemView extends Component {
     removeItem(){
         axios.delete(`${process.env.API_URL}category/${this.state.Category._id}`)
                 .then(response => {
+                    window.location.reload();
                     console.log(response.data.data);
                 });
     }

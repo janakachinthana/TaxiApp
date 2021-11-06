@@ -16,6 +16,7 @@ class VehicleItemView extends Component{
     removeItem(){
         axios.delete(`${process.env.API_URL}vehicle/${this.state.Vehicle._id}`)
                 .then(response => {
+                    window.location.reload();
                     console.log(response.data.data);
                 });
     }

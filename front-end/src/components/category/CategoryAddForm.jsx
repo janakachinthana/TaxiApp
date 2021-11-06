@@ -26,6 +26,7 @@ export default class CategoryAddForm extends Component {
         axios.post(`${process.env.API_URL}category`, category)
             .then(response => {
                 console.log(response.data);
+                window.location.reload();
             });
     }
 

@@ -68,6 +68,7 @@ export default class VehicleAddForm extends Component {
         axios.post(`${process.env.API_URL}vehicle`, vehicle)
             .then(response => {
                 console.log(response.data);
+                window.location.reload();
             });
     }
 
